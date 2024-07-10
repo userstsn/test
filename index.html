@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        font-family: Impact, sans-serif;
+        letter-spacing: -0.1em;
+        color: #212121;
+      }
+
+      .hero {
+        background: url("https://annapurnaexpress.prixacdn.net/media/albums/interview.jpg_lCQzibiNO5.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+  <nav class="flex text-[#212121] justify-between m-5">
+    <div class="text-3xl font-extrabold uppercase">JONNEX</div>
+    <div class="">
+      <ul class="flex gap-10">
+        <li>About</li>
+        <li>Training</li>
+        <li>Testomonial</li>
+        <li>Contacts</li>
+      </ul>
+    </div>
+    <div class="outline outline-1 px-5 py-3 rounded-full hover:bg-[#212121] hover:text-white hover:outline-none transition-colors">
+      Join Today
+    </div>
+  </nav>
+  <section class="h-[85vh] flex flex-col m-5">
+    <div class="justify-center flex-col items-center flex h-[40%]">
+      <span class="text-sm uppercase font-medium">Achieve Your fitness goal</span>
+      <div class="text-8xl text-center font-extrabold uppercase">
+        Find Your <br />STRENGTH
+      </div>
+    </div>
+    <div class="hero h-[60%] overflow-hidden rounded-lg flex flex-col text-white justify-center items-center backdrop-blur-lg">
+      <span class="text-sm uppercase font-medium text-white">Achieve Your fitness goal lorem10</span>
+      <div class="text-8xl text-center font-extrabold uppercase text-white">
+        INSIDE <br />AND OUT
+      </div>
+      <div class="flex justify-between w-full px-10">
+        <span class="text-sm uppercase font-medium text-white">
+          Achieve Your fitness goal Lorem ipsum <br />
+          dolor sit amet consectetur adipisicing elit. Cum, perspiciatis!
+        </span>
+        <span class="text-sm uppercase font-medium text-white">Achieve Your fitness goal</span>
+      </div>
+    </div>
+  </section>
+  -->
+
+    <form class="flex flex-col mx-5" id="loginForm">
+      <input
+        class="border w-full mb-2 p-2"
+        placeholder="Enter email"
+        type="email"
+        id="email"
+        required
+      />
+      <input
+        class="border w-full mb-2 p-2"
+        placeholder="Enter Password"
+        type="password"
+        id="password"
+        required
+      />
+      <button class="bg-blue-500 text-white py-2 rounded" type="submit">
+        Login
+      </button>
+    </form>
+
+    <div id="result" class="mx-5 mt-5 p-5 border rounded hidden">
+      <h2 class="text-xl font-bold">Entered Details:</h2>
+      <p>Email: <span id="resultEmail"></span></p>
+      <p>Password: <span id="resultPassword"></span></p>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+
+          document.getElementById("resultEmail").textContent = email;
+          document.getElementById("resultPassword").textContent = password;
+
+          document.getElementById("result").classList.remove("hidden");
+        });
+    </script>
+  </body>
+</html>
